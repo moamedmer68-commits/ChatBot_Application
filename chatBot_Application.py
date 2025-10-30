@@ -2,7 +2,6 @@
 import streamlit as st
 import google.generativeai as genai
 import os
-api=AIzaSyC4Y45I9NBNOI5NZXGoOAZq8Y3Ujv4sLUQ
 os.system("pip install -U google-generativeai")
 api = os.getenv("GOOGLE_API_KEY")
 
@@ -45,4 +44,5 @@ if user_input := st.chat_input("Type your question here..."):
         message_placeholder.markdown(response_text)
 
     st.session_state.messages.append({"role": "assistant", "content": response_text})
+
 
